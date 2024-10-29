@@ -1,0 +1,132 @@
+object Form1: TForm1
+  Left = 268
+  Height = 477
+  Top = 250
+  Width = 562
+  Caption = 'Form1'
+  ClientHeight = 477
+  ClientWidth = 562
+  OnCreate = FormCreate
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 477
+    Top = 0
+    Width = 562
+    Align = alClient
+    Columns = <    
+      item
+        Title.Caption = 'Column1'
+        Width = 30
+        FieldName = 'Column1'
+      end    
+      item
+        Title.Caption = 'Column2'
+        Width = 80
+        FieldName = 'Column2'
+      end    
+      item
+        Title.Caption = 'Column3'
+        Width = 300
+        FieldName = 'Column3'
+      end    
+      item
+        Title.Caption = 'Column4'
+        Width = 130
+        FieldName = 'Column4'
+      end>
+    DataSource = ds__csv_FUNCIONARIO_REGRAS
+    TabOrder = 0
+    TitleFont.CharSet = ANSI_CHARSET
+    TitleFont.Height = -11
+    TitleFont.Name = 'Arial'
+    TitleFont.Pitch = fpVariable
+    TitleFont.Quality = fqDraft
+    TitleStyle = tsNative
+    OnDblClick = DBGrid1DblClick
+  end
+  object ds__csv_FUNCIONARIO_REGRAS: TDataSource
+    DataSet = CSVDataset1
+    Left = 472
+    Top = 80
+  end
+  object CSVDataset1: TCSVDataset
+    FileName = 'C:\csvTabelaRegras\ECF_FUNCIONARIO_REGRAS_202410291328.csv'
+    MaxIndexesCount = 4
+    FieldDefs = <    
+      item
+        Name = 'Column1'
+        DataType = ftString
+        Precision = -1
+        Size = 255
+      end    
+      item
+        Name = 'Column2'
+        DataType = ftString
+        Precision = -1
+        Size = 255
+      end    
+      item
+        Name = 'Column3'
+        DataType = ftString
+        Precision = -1
+        Size = 255
+      end    
+      item
+        Name = 'Column4'
+        DataType = ftString
+        Precision = -1
+        Size = 255
+      end>
+    Filtered = True
+    CSVOptions.FirstLineAsFieldNames = False
+    CSVOptions.DefaultFieldLength = 255
+    CSVOptions.Delimiter = ','
+    CSVOptions.QuoteChar = '"'
+    CSVOptions.LineEnding = #13#10
+    CSVOptions.IgnoreOuterWhitespace = False
+    CSVOptions.QuoteOuterWhitespace = True
+    Left = 472
+    Top = 144
+    object CSVDataset1Column1: TStringField
+      DisplayLabel = 'ID'
+      FieldKind = fkData
+      FieldName = 'Column1'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 255
+    end
+    object CSVDataset1Column2: TStringField
+      FieldKind = fkData
+      FieldName = 'Column2'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 255
+    end
+    object CSVDataset1Column3: TStringField
+      FieldKind = fkData
+      FieldName = 'Column3'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 255
+    end
+    object CSVDataset1Column4: TStringField
+      FieldKind = fkData
+      FieldName = 'Column4'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 255
+    end
+  end
+end
